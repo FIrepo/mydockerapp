@@ -5,5 +5,5 @@ services:
 before_install:
   - docker build -t vigneshkarnika/dockertestapp -f Dockerfile.dev .
 
-scripts:
+script:
   - docker run vigneshkarnika/dockertestapp npm run test -- --coverage
