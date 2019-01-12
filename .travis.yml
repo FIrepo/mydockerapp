@@ -1,0 +1,9 @@
+sudo: required
+services: 
+  - docker
+
+before_install:
+  - docker build -t 'vigneshkarnika/dockertestapp' -f Dockerfile.dev .
+
+scripts:
+  - docker run vigneshkarnika/dockertestapp npm run test -- --coverage
